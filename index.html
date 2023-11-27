@@ -66,9 +66,6 @@
                         <td colspan="2">' + (feature.properties['FOTO'] !== null ? autolinker.link(feature.properties['FOTO'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fotoOO'] !== null ? '<img src="images/' + String(feature.properties['fotoOO']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Ranging QS</th>\
                         <td>' + (feature.properties['Deskripsi Univ_QS WUR'] !== null ? autolinker.link(feature.properties['Deskripsi Univ_QS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -78,6 +75,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Fakultas Fakultas</strong><br />' + (feature.properties['Deskripsi Univ_Fakultas'] !== null ? autolinker.link(feature.properties['Deskripsi Univ_Fakultas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                <tr>\
+                        <td colspan="2">' + (feature.properties['fotoOO'] !== null ? '<img src="images/' + String(feature.properties['fotoOO']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
